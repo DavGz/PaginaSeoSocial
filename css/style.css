@@ -52,12 +52,15 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-primary);
   line-height: 1.25;
   margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+.titulo-press {
+  color: var(--color-light);
   letter-spacing: 1.5px;
 }
-
 p {
   margin-bottom: 1rem;
 }

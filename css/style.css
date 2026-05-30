@@ -34,6 +34,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  text-align: justify;
 }
 
 body {
@@ -87,7 +88,15 @@ ul {
 }
 
 .bg-light {
-  background-color: #ffffff;
+  background-color: #f8f9fa; /* Elegant off-white background to let white cards pop */
+}
+#sobre-daniel {
+  position: relative;
+  background-color: #ffffff; /* Elegant pure white base */
+  /* Extremely subtle corporate watermark textured cross grid pattern (que esté pero no esté) */
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c5a059' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  border-top: 1px solid rgba(197, 160, 89, 0.05);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.05);
 }
 .bg-dark {
   background-color: var(--color-primary);
@@ -205,23 +214,67 @@ ul {
 }
 
 .nav-link {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--color-text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  padding: 10px 22px;
+  border: 1px solid rgba(197, 160, 89, 0.45); /* Elegant gold outline border */
+  border-radius: 4px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(253, 252, 249, 0.95) 100%
+  );
   position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(197, 160, 89, 0.05);
 }
 
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    #031b3a 100%
+  ); /* Elegant corporate blue gradient background fill on hover */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Elegant gold line at the top of the button on hover */
 .nav-link::after {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   width: 0;
   height: 2px;
-  bottom: -5px;
-  left: 0;
   background-color: var(--color-accent);
-  transition: var(--transition);
+  transition: width 0.4s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: 0 6px 15px rgba(2, 12, 27, 0.18);
+  transform: translateY(-2px);
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav-link:hover::after {
@@ -367,20 +420,48 @@ ul {
 }
 
 .card {
-  background-color: var(--color-light);
+  background-color: #ffffff;
   padding: 3.5rem 2.5rem;
-  border-radius: 4px;
-  box-shadow: var(--shadow);
+  border-radius: 12px; /* Smoother premium roundness */
+  box-shadow: 0 10px 30px rgba(2, 12, 27, 0.03);
   text-align: center;
-  transition: var(--transition);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  border-top: 4px solid transparent;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(197, 160, 89, 0.25); /* Elegant gold-tinted border */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Beautiful elegant watermarked emblem background inside each card */
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  font-size: 8rem;
+  opacity: 0.03;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.card:nth-child(1)::before {
+  content: "⚓";
+}
+.card:nth-child(2)::before {
+  content: "🏇";
+}
+.card:nth-child(3)::before {
+  content: "🏛️";
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-hover);
-  border-top-color: var(--color-accent);
+  transform: translateY(-12px);
+  border-color: var(--color-primary);
+  box-shadow: 0 25px 50px rgba(2, 12, 27, 0.15);
+}
+
+.card:hover::before {
+  transform: scale(1.1) rotate(-10deg);
+  opacity: 0.05;
 }
 
 .card-icon {
@@ -506,24 +587,59 @@ ul {
 
 /* Elementos pequeños de tarjeta */
 .card-sm {
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 .icon-sm {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background-color: rgba(197, 160, 89, 0.05);
   font-size: 2rem;
-  color: var(--color-accent);
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 10px rgba(197, 160, 89, 0.1);
+}
+.card:hover .icon-sm {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(2, 12, 27, 0.2);
+  transform: rotateY(360deg);
 }
 .card-title-sm {
-  font-family: var(--font-body);
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-weight: 700;
   color: var(--color-primary);
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+  width: 100%;
+}
+.card-title-sm::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: all 0.4s ease;
+}
+.card:hover .card-title-sm::after {
+  width: 60px;
+  background-color: var(--color-primary);
 }
 .card-text-sm {
   font-size: 0.9rem;
   margin-bottom: 0;
   color: var(--color-text-muted);
+  line-height: 1.5;
 }
 
 .btn-block {
@@ -699,7 +815,113 @@ ul {
   }
 }
 
+/* =========================================
+   Liderazgo Section (Premium Editorial Dark Section)
+========================================= */
+#liderazgo {
+  background: radial-gradient(
+    circle at 80% 20%,
+    #081d38 0%,
+    var(--color-primary) 100%
+  );
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(197, 160, 89, 0.2);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+#liderazgo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    rgba(197, 160, 89, 0.02) 1px,
+    transparent 0
+  );
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+
+#liderazgo .content-grid {
+  align-items: center;
+  gap: 5rem;
+}
+
+#liderazgo h3.titulo-press {
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+#liderazgo .role {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+#liderazgo .role::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin-top: 8px;
+}
+
+#liderazgo .text-gray {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+#liderazgo .image-placeholder {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: transparent;
+  height: 380px;
+}
+
+#liderazgo .image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#liderazgo .content-grid:hover .image-placeholder {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65);
+  border-color: rgba(197, 160, 89, 0.35);
+}
+
+#liderazgo .content-grid:hover .image-placeholder img {
+  transform: scale(1.06);
+}
+
 @media screen and (max-width: 768px) {
+  #liderazgo .image-placeholder {
+    height: 280px;
+  }
+  #liderazgo .content-grid {
+    gap: 2.5rem;
+  }
+  #liderazgo h3.titulo-press {
+    font-size: 1.8rem;
+  }
   .menu-toggle {
     display: flex;
   }

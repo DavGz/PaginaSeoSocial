@@ -145,4 +145,34 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   loadBloggerPosts();
+
+  // 6. Comportamiento del menú desplegable interactivo en tablets y dispositivos táctiles
+  const dropdownToggle = document.getElementById("nav-trajectory-toggle");
+  const dropdownContainer = document.getElementById("dropdown-trajectory-container");
+
+  if (dropdownToggle && dropdownContainer) {
+    dropdownToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdownContainer.classList.toggle("is-open");
+      const expanded = dropdownContainer.classList.contains("is-open");
+      dropdownToggle.setAttribute("aria-expanded", expanded);
+    });
+
+    // Cerrar al hacer clic fuera del menú
+    document.addEventListener("click", (e) => {
+      if (!dropdownContainer.contains(e.target)) {
+        dropdownContainer.classList.remove("is-open");
+        dropdownToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Cerrar dropdown al hacer clic en un enlace de item
+    const dropdownItems = dropdownContainer.querySelectorAll(".dropdown-item");
+    dropdownItems.forEach(item => {
+      item.addEventListener("click", () => {
+        dropdownContainer.classList.remove("is-open");
+        dropdownToggle.setAttribute("aria-expanded", "false");
+      } );
+    });
+  }
 });

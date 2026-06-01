@@ -8,7 +8,7 @@
     <meta name="keywords" content="Daniel Uzcátegui Specht, Caracas Polo Club, Federación Venezolana de Deportes Ecuestres, Sector Energético, Alta Dirección, Comercio Marítimo, Diplomacia Corporativa, Venezuela">
     <meta name="author" content="Daniel Uzcátegui Specht">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://danieluzcateguispecht.com/">
+    <link class="canonical" href="https://danieluzcateguispecht.com/">
     
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
@@ -36,15 +36,17 @@
     <!-- Header & Navigation -->
     <header class="header" id="header">
         <div class="container nav-container">
-            <a href="#" class="logo">Daniel Uzcátegui</a>
-            <nav class="nav">
+            <a href="#" class="logo" id="logo-branding">Daniel Uzcátegui</a>
+            <nav class="nav" id="main-navigation">
                 <ul class="nav-list">
-                    <li><a href="#hero" class="nav-link">Inicio</a></li>
-                    <li><a href="#sobre-daniel" class="nav-link">Sobre Daniel</a></li>
-                    <li><a href="#liderazgo" class="nav-link">Liderazgo</a></li>
-                    <li><a href="#filantropia" class="nav-link">Filantropía</a></li>
-                    <li><a href="#insights" class="nav-link">Insights</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#hero" class="nav-link" id="nav-home">Inicio</a></li>
+                    <li><a href="#sobre-daniel" class="nav-link" id="nav-about">Sobre Daniel</a></li>
+                    <li><a href="#liderazgo" class="nav-link" id="nav-leadership">Liderazgo</a></li>
+                    <li><a href="#prensa" class="nav-link" id="nav-press">Prensa</a></li>
+                    <li><a href="#galeria" class="nav-link" id="nav-gallery">Galería</a></li>
+                    <li><a href="#filantropia" class="nav-link" id="nav-philanthropy">Filantropía</a></li>
+                    <li><a href="#insights" class="nav-link" id="nav-insights">Insights</a></li>
+                    <li><a href="#contacto" class="nav-link" id="nav-contact">Contacto</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle" id="mobile-menu">
@@ -65,12 +67,11 @@
                     <p class="intro">
                         "Con una trayectoria marcada por la excelencia operativa y la diplomacia, integro la visión geopolítica del comercio marítimo internacional con la capacidad organizativa requerida en la alta dirección de organizaciones sociales y deportivas exclusivas."
                     </p>
-                    <a href="#contacto" class="btn btn-primary">Conexión Profesional</a>
+                    <a href="#contacto" class="btn btn-primary" id="hero-cta-btn">Conexión Profesional</a>
                 </div>
                 <div class="hero-image reveal delay-1">
-                    <!-- Placeholder de imagen -->
-                    <div class="image-placeholder portrait">
-                        <span>[Fotografía Corporativa Principal]</span>
+                    <div class="image-placeholder portrait" style="background: transparent; border: none; box-shadow: 0 20px 45px rgba(2,12,27,0.15); overflow: hidden; border-radius: 12px;">
+                        <img src="img/WhatsApp Image 2026-05-30 at 10.37.47 AM (1).jpeg" alt="Daniel Uzcátegui Specht - Gran Premio Elite" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -108,9 +109,8 @@
                 </div>
                 <div class="content-grid reveal delay-1">
                     <div class="image-content">
-                        <!-- Placeholder de imagen -->
-                        <div class="image-placeholder landscape">
-                            <span>[Imagen de Perfil en Entorno Corporativo]</span>
+                        <div class="image-placeholder landscape" style="overflow: hidden; border-radius: 12px; border: 1px solid rgba(197, 160, 89, 0.25); box-shadow: var(--shadow);">
+                            <img src="img/WhatsApp Image 2026-05-30 at 10.37.48 AM (7).jpeg" alt="Daniel Uzcátegui Specht" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                     <div class="text-content">
@@ -140,14 +140,14 @@
                 
                 <div class="content-grid reveal delay-1 mb-4">
                     <div class="text-content">
-                        <h3 class="titulo-press">Presidente de Club De Campo Polo Club  </h3>
+                        <h3 class="titulo-press">Presidente de Club De Campo Polo Club</h3>
                         <p class="text-gray">
-                            Liderazgo del único club de polo en Venezuela, enfocado en preservar su prestigio histórico mientras se impulsa la excelencia operativa y la proyección nacional de la disciplina.
+                            Liderazgo del prestigioso club de polo en Venezuela, enfocado en preservar su legado histórico mientras se impulsa la excelencia operativa y la proyección nacional de la disciplina ecuestre.
                         </p>
                     </div>
                     <div class="image-content">
                         <div class="image-placeholder landscape dark">
-                            <img src="./img/caballos1.jpeg" alt="polo" class="aportes-sociales">
+                            <img src="img/WhatsApp Image 2026-05-30 at 10.37.47 AM.jpeg" alt="Campeonato de Polo" class="aportes-sociales">
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                 <div class="content-grid reveal delay-2">
                     <div class="image-content order-2-mobile">
                         <div class="image-placeholder landscape dark">
-                            <img src="./img/caballos2.jpeg" alt="polo" class="aportes-sociales">
+                            <img src="img/WhatsApp Image 2026-05-30 at 10.37.48 AM (4).jpeg" alt="Competencia oficial de Polo" class="aportes-sociales">
                         </div>
                     </div>
                     <div class="text-content">
@@ -168,14 +168,79 @@
 
                 <div class="content-grid reveal delay-1 mb-4">
                     <div class="text-content">
-                        <h3 class="titulo-press">Vicepresidente de la Asociación de Caballos de Salto De Venezuela </h3>
+                        <h3 class="titulo-press">Vicepresidente de la Asociación de Caballos de Salto de Venezuela</h3>
                         <p class="text-gray">
-                            Liderazgo del único club de polo en Venezuela, enfocado en preservar su prestigio histórico mientras se impulsa la excelencia operativa y la proyección nacional de la disciplina.
+                            Coordinación y fomento de torneos oficiales de salto ecuestre. Gestión de proyectos deportivos que elevan los estándares técnicos y la infraestructura competitiva para jinetes y caballos nacionales.
                         </p>
                     </div>
                     <div class="image-content">
                         <div class="image-placeholder landscape dark">
-                            <img src="./img/caballos1.jpeg" alt="polo" class="aportes-sociales">
+                            <img src="img/WhatsApp Image 2026-05-30 at 10.37.49 AM (1).jpeg" alt="Torneo Oficial de Salto de Obstáculos" class="aportes-sociales">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prensa: Reportaje Ocean Drive -->
+        <section id="prensa" class="section press-editorial">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="virtue">Prensa & Destacados</span>
+                    <h2>En los Medios</h2>
+                    <p class="lead-text mt-1">Daniel Uzcátegui en la edición especial de la prestigiosa revista Ocean Drive Venezuela.</p>
+                </div>
+
+                <div class="editorial-layout reveal delay-1">
+                    <div class="editorial-main">
+                        <div class="editorial-header">
+                            <span class="editorial-tag">Reportaje Especial</span>
+                            <h3 class="editorial-title">Polo: Deporte de Estilo y Riesgo</h3>
+                            <div class="editorial-meta">Publicado por Aimara V. Cañizales G. | Fotografía: Cortesía Ocean Drive</div>
+                        </div>
+
+                        <div class="editorial-body">
+                            <p>
+                                Elegante, desafiante y una disciplina de élite durante todos los tiempos. Este deporte ecuestre es practicado por jinetes apasionados que se ven atraídos por la adrenalina de marcar goles montando hermosos caballos. Con raíces que se remontan a finales de la década de 1870 en Venezuela, el polo se convirtió rápidamente en un emblema de distinción con la fundación del histórico Club de Polo de Caracas en 1880.
+                            </p>
+
+                            <blockquote class="editorial-quote">
+                                "Es un deporte en el que dos equipos con 4 jugadores cada uno, montados a caballo, intentan llevar, por medio de un taco, una pequeña pelota hacia la portería del rival, resultando ganador el que marca la mayor cantidad de goles."
+                                <span>Daniel Uzcátegui, Presidente de Club de Campo Polo Club</span>
+                            </blockquote>
+
+                            <h3>Definiendo el Polo</h3>
+                            <p>
+                                El polo no solo exige un dominio absoluto de la equitación, sino también una profunda conexión con el caballo. Tradicionalmente jugado en canchas de grama, hoy en día se experimenta en diversas modalidades que expanden su alcance, como el polo sobre arena o nieve, las cuales adaptan la cantidad de jugadores y los colores de la bocha para optimizar el dinamismo del juego.
+                            </p>
+
+                            <h3>El Futuro del Polo en Venezuela</h3>
+                            <p>
+                                Actualmente, el polo en Venezuela cuenta con ocho equipos activos completos, entre los que destacan <strong>Mamba Negra</strong>, Los Samanes, Mondragón, Caracas Polo, Monte Oscuro, Torre Casa, Club de Campo y Plantación Doña. Las temporadas, que usualmente inician a mediados de febrero, se caracterizan por una alta intensidad competitiva.
+                            </p>
+                            <p>
+                                Con miras a institucionalizar y potenciar la disciplina ecuestre a nivel nacional, se están dando pasos firmes de la mano con la directiva de la Asociación Civil Club de Campo para consolidar formalmente la <strong>Federación Nacional de Polo</strong>, abriendo nuevos horizontes de patrocinio y alcance de fanáticos en el país.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="editorial-sidebar">
+                        <div class="sidebar-widget text-left">
+                            <h4>Reglas & Chukkers</h4>
+                            <ul class="rules-list">
+                                <li><strong>Duración:</strong> Partidos de hasta 90 minutos divididos en tiempos llamados <em>"chukkers"</em> de 7 minutos.</li>
+                                <li><strong>Roles:</strong> Atacante, atacante alterno, armador y defensa (back).</li>
+                                <li><strong>Equipamiento:</strong> Casco de seguridad, camiseta de punto, guantes, botas de cuero y taco de polo obligatoriamente en la mano derecha.</li>
+                                <li><strong>Protección Animal:</strong> Cola trenzada y crin afeitada en los caballos para evitar interferencias con las riendas.</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget roda-widget text-left">
+                            <span class="badge-roda">Tendencia Innovadora</span>
+                            <h4>Roda Polo</h4>
+                            <p>
+                                Una de las alternativas más vanguardistas que rompe paradigmas es el <strong>Roda Polo</strong>, donde los caballos son reemplazados por monociclos eléctricos (<em>e-wheels</em>). Gracias a un giroscopio integrado de alta tecnología, el monociclo responde al movimiento del cuerpo del jinete, manteniendo el dinamismo táctico del polo clásico de forma urbana y sostenible.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -199,7 +264,7 @@
                             Creemos firmemente en el poder transformador de la conexión con el caballo. Nuestra escuela filantrópica está dedicada a enseñar equitación a niños de todas las edades y niveles, promoviendo valores fundamentales de disciplina, empatía, autoconfianza y respeto absoluto hacia los animales y la naturaleza.
                         </p>
                         <p class="text-muted" style="line-height: 1.8; text-align: justify; margin-bottom: 2rem;">
-                            Con un enfoque de profunda inclusión social, abrimos nuestras puertas a niños con condiciones especiales de desarrollo, retos cognitivos o motores, brindando sesiones personalizadas de **Equinoterapia** y equitación adaptada dirigidas por terapeutas y profesionales certificados. Es un espacio de transformación donde cada avance se celebra como una victoria de vida.
+                            Con un enfoque de profunda inclusión social, abrimos nuestras puertas a niños con condiciones especiales de desarrollo, retos cognitivos o motores, brindando sesiones personalizadas de <strong>Equinoterapia</strong> y equitación adaptada dirigidas por terapeutas y profesionales certificados. Es un espacio de transformación donde cada avance se celebra como una victoria de vida.
                         </p>
                         
                         <ul class="key-points" style="list-style: none; padding: 0;">
@@ -211,12 +276,74 @@
                     
                     <div class="image-content">
                         <div class="image-placeholder landscape" style="overflow: hidden; border-radius: 12px; border: 1px solid rgba(197, 160, 89, 0.25); box-shadow: 0 15px 35px rgba(2, 12, 27, 0.08); background-color: #020c1b; height: 420px; transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);">
-                            <!-- Elegant Placeholder with Gold Accent details that looks like a finished banner -->
-                            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; background: linear-gradient(135deg, #02122b, #0c2340); padding: 3rem; text-align: center;">
-                                <div style="width: 80px; height: 80px; border-radius: 50%; border: 2px dashed var(--color-accent); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-bottom: 1.5rem; background-color: rgba(197, 160, 89, 0.05);">🏇</div>
-                                <h4 style="font-family: var(--font-heading); color: var(--color-accent); font-weight: 700; margin-bottom: 0.8rem; font-size: 1.4rem; letter-spacing: 0.5px;">Equinoterapia e Inclusión</h4>
-                                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75); max-width: 320px; margin: 0; line-height: 1.6;">Espacio de formación ecuestre integral dedicado al desarrollo y bienestar infantil en todas las edades y condiciones.</p>
-                            </div>
+                            <img src="img/WhatsApp Image 2026-05-30 at 10.37.46 AM.jpeg" alt="Equinoterapia, Inclusión y Celebración Ecuestre con Premios" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Excelencia Ecuestre -->
+        <section id="galeria" class="section gallery-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="virtue">Colección Visual</span>
+                    <h2>Galería de Excelencia</h2>
+                    <p class="lead-text mt-1">Momentos destacados de alta competición, triunfos ecuestres y liderazgo deportivo de Daniel Uzcátegui.</p>
+                </div>
+
+                <div class="gallery-grid reveal delay-1">
+                    <div class="gallery-item">
+                        <img src="img/WhatsApp Image 2026-05-30 at 10.37.47 AM.jpeg" alt="Salto ecuestre Daniel Uzcátegui" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon">🏆</div>
+                            <h4 class="gallery-caption">Campeonato de Salto</h4>
+                            <span class="gallery-sub">Club de Campo 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item tall">
+                        <img src="img/WhatsApp Image 2026-05-30 at 10.37.47 AM (3).jpeg" alt="Competencia nacional de salto" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon">🏇</div>
+                            <h4 class="gallery-caption">Máxima Concentración</h4>
+                            <span class="gallery-sub">Salto de Obstáculos</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/WhatsApp Image 2026-05-30 at 10.37.48 AM.jpeg" alt="Ceremonia de Premiación" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon">🥇</div>
+                            <h4 class="gallery-caption">Ceremonia de Gala</h4>
+                            <span class="gallery-sub">Premios Especiales</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item wide">
+                        <img src="img/WhatsApp Image 2026-05-30 at 10.37.49 AM.jpeg" alt="Polo Mamba Negra en acción" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon">⚡</div>
+                            <h4 class="gallery-caption">Mamba Negra Polo Team</h4>
+                            <span class="gallery-sub">Acción en Pista de Polo</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/WhatsApp Image 2026-05-30 at 10.37.48 AM (2).jpeg" alt="Salto C.N.O." class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon">🌟</div>
+                            <h4 class="gallery-caption">Gran Premio Elite</h4>
+                            <span class="gallery-sub">Estilo & Precisión</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/WhatsApp Image 2026-05-30 at 10.37.48 AM (3).jpeg" alt="Podio y Familia" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon">🤝</div>
+                            <h4 class="gallery-caption">Podio Ecuestre</h4>
+                            <span class="gallery-sub">Celebración Institucional</span>
                         </div>
                     </div>
                 </div>
@@ -260,10 +387,10 @@
                     <div class="contact-info">
                         <h3>Redes y Enlaces</h3>
                         <p class="mb-2">Puede seguir mi actividad profesional y reflexiones de liderazgo a través de mi perfil oficial.</p>
-                        <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block mb-1">Conectar en LinkedIn</a>
+                        <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block mb-1" id="contact-linkedin-link">Conectar en LinkedIn</a>
                     </div>
                     <div class="contact-form-container">
-                        <form class="contact-form">
+                        <form class="contact-form" id="contact-form-element">
                             <div class="form-group">
                                 <label for="name">Nombre Completo</label>
                                 <input type="text" id="name" name="name" required placeholder="Su nombre">
@@ -276,7 +403,7 @@
                                 <label for="message">Mensaje</label>
                                 <textarea id="message" name="message" rows="5" required placeholder="Motivo de su contacto..."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                            <button type="submit" class="btn btn-primary btn-block" id="contact-submit-btn">Enviar Mensaje</button>
                         </form>
                     </div>
                 </div>
@@ -298,6 +425,8 @@
                         <li><a href="#hero">Inicio</a></li>
                         <li><a href="#sobre-daniel">Sobre Daniel</a></li>
                         <li><a href="#liderazgo">Liderazgo Institucional</a></li>
+                        <li><a href="#prensa">Prensa</a></li>
+                        <li><a href="#galeria">Galería</a></li>
                         <li><a href="#insights">Insights</a></li>
                     </ul>
                 </div>
